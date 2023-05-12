@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test productos</title>
+    <link rel="stylesheet" href="/pruebaProductos/css/index.css">
+    <script src="/pruebaProductos/modulos/datosForm.js" type="module"></script>
+</head>
+<body>
+<!-- Código.
+● Descripción.
+● Precio de compra.
+● Precio de venta.
+● Cantidad en bodega.
+● Cantidad mínima requerida en bodega.
+● Cantidad máxima de inventario permitida.
+● Porcentaje de Descuento. -->
+
+   <main>
+    <div class="contenedor">
+        <div class="contenido">
+            
+            <form action="" id="miFormulario">
+                <div>
+                    <select id="selector" style="    padding: 7px;
+                    border-radius: 10px;
+                    background-color: white;
+                    color: crimson;
+                    font-size: 15px;
+                    font-weight: 700;">
+                        <option selected>escoge una opcion</option>
+                        <option value="1">prenda de vestir</option>
+                        <option value="2">calzado</option>
+                    </select>
+                </div>
+                <div class="prenda" style="display: none;" id="prenda">
+                    <div>
+                    <label for="" class="form-label">ingrese talla: </label>
+                    <input type="text"
+                      class="form-control" name="tallaPrenda"  aria-describedby="helpId" placeholder="">
+                    </div>
+                    <br><br>
+                    <label for="" class="form-label">se puede planchar? </label>
+                    <input type="text"
+                      class="form-control" name="planchar"  aria-describedby="helpId" placeholder="">
+                </div>
+                <div class="calzado" style="display: none;" id="calzado">
+                    <div>
+                        <label for="" class="form-label">ingrese talla: </label>
+                        <input type="text"
+                          class="form-control" name="tallaCalzado"  aria-describedby="helpId" placeholder="">
+                    </div>
+                </div>
+                <div>
+                    <label for="" class="form-label">ingrese codigo: </label>
+                    <input type="text"
+                      class="form-control" name="codigo"  aria-describedby="helpId" placeholder="">
+                  </div>
+                  <div>
+                    <label for="" class="form-label">ingrese Descripción: </label>
+                    <input type="text"
+                      class="form-control" name="descripcion"  aria-describedby="helpId" placeholder="">
+                  </div>
+                  <div>
+                    <label for="" class="form-label">Precio de compra: </label>
+                    <input type="text"
+                      class="form-control" name="precioCompra"  aria-describedby="helpId" placeholder="">
+                  </div>
+                  <div>
+                    <label for="" class="form-label">Precio de venta: </label>
+                    <input type="text"
+                      class="form-control" name="precioVenta"  aria-describedby="helpId" placeholder="">
+                  </div>
+                  <div>
+                    <label for="" class="form-label">Cantidad en bodega: </label>
+                    <input type="text"
+                      class="form-control" name="canBodega"  aria-describedby="helpId" placeholder="">
+                  </div>
+                  <div>
+                    <label for="" class="form-label">Cantidad mínima requerida en bodega: </label>
+                    <input type="text"
+                      class="form-control" name="canMinima"  aria-describedby="helpId" placeholder="">
+                  </div>
+                  <div>
+                    <label for="" class="form-label">Cantidad máxima de inventario permitida: </label>
+                    <input type="text"
+                      class="form-control" name="canMaxima"  aria-describedby="helpId" placeholder="">
+                  </div>
+                  <div>
+                    <label for="" class="form-label">Porcentaje de Descuento: </label>
+                    <input type="text"
+                      class="form-control" name="descuento"  aria-describedby="helpId" placeholder="">
+                  </div>
+                  <div class="boton">
+                    <button class="calcular">CALCULAR</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+        </div>
+    </div>
+    <div id="cartas" style="display: flex; flex-wrap: wrap; gap: 1rem;margin-top: 5%; margin-left:5%; margin-right:5%;"></div>
+    <br><br><br><br><br><br><br><br>
+   </main>
+</body>
+</html>

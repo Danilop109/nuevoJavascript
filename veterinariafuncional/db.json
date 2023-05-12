@@ -1,0 +1,150 @@
+{
+  "mascotas": [
+    {
+      "id": 3,
+      "imagen": "img/perro3.jpeg",
+      "animal": "Perro",
+      "raza": "Siberian Husky",
+      "nombre": "Julio",
+      "edad": "7 Meses",
+      "propietario": "Sin Propietario"
+    },
+    {
+      "id": 4,
+      "imagen": "img/perro3.jpeg",
+      "animal": "Perro",
+      "raza": "Siberian Husky",
+      "nombre": "Julio",
+      "edad": "7 Meses",
+      "propietario": "Sin Propietario"
+    },
+    {
+      "id": 6,
+      "imagen": "img/gato1.jpeg",
+      "animal": "Gato",
+      "raza": "British Shorthair",
+      "nombre": "Cristian",
+      "edad": "8 Meses",
+      "propietario": "Sin Propietario"
+    },
+    {
+      "id": 8,
+      "imagen": "img/gato3.jpeg",
+      "animal": "Gato",
+      "raza": "Persian cat",
+      "nombre": "Einstein",
+      "edad": "1 Año",
+      "propietario": "Sin Propietario"
+    },
+    {
+      "id": 9,
+      "imagen": "img/gato4.jpeg",
+      "animal": "Gato",
+      "raza": "Birman",
+      "nombre": "Kira",
+      "edad": "1 Año",
+      "propietario": "Sin Propietario"
+    },
+    {
+      "imagen": "C:\\fakepath\\1.jpg",
+      "nombre": "dssafsfsdfsf",
+      "animal": "fdsdfsds",
+      "raza": "dfffd",
+      "edad": "2",
+      "propietario": "fdsdf",
+      "id": 10
+    },
+    {
+      "imagen": "C:\\fakepath\\1.jpg",
+      "nombre": "f33",
+      "animal": "f44",
+      "raza": "df44",
+      "edad": "3",
+      "propietario": "erreer4",
+      "id": 11
+    }
+  ],
+  "servicios": [
+    {
+      "id": 1,
+      "imagen": "img/perro1.jpeg",
+      "animal": "Perro",
+      "raza": "ladshfksahdfkjsd",
+      "nombre": "Albert",
+      "edad": "1 Año",
+      "propietario": "Sin Propietario"
+    },
+    {
+      "id": 2,
+      "imagen": "img/perro2.jpeg",
+      "animal": "Perro",
+      "raza": "Bulldog",
+      "nombre": "Seth",
+      "edad": "5 Meses",
+      "propietario": "Sin Propietario"
+    },
+    {
+      "id": 3,
+      "imagen": "img/perro3.jpeg",
+      "animal": "Perro",
+      "raza": "Siberian Husky",
+      "nombre": "Julio",
+      "edad": "7 Meses",
+      "propietario": "Sin Propietario"
+    },
+    {
+      "id": 4,
+      "imagen": "img/perro4.jpeg",
+      "animal": "Perro",
+      "raza": "Chihuahua",
+      "nombre": "Maria",
+      "edad": "4 Meses",
+      "propietario": "Sin Propietario"
+    },
+    {
+      "id": 6,
+      "imagen": "img/gato1.jpeg",
+      "animal": "Gato",
+      "raza": "British Shorthair",
+      "nombre": "Cristian",
+      "edad": "8 Meses",
+      "propietario": "Sin Propietario"
+    },
+    {
+      "id": 8,
+      "imagen": "img/gato3.jpeg",
+      "animal": "Gato",
+      "raza": "Persian cat",
+      "nombre": "Einstein",
+      "edad": "1 Año",
+      "propietario": "Sin Propietario"
+    },
+    {
+      "id": 9,
+      "imagen": "img/gato4.jpeg",
+      "animal": "Gato",
+      "raza": "Birman",
+      "nombre": "Kira",
+      "edad": "1 Año",
+      "propietario": "Sin Propietario"
+    },
+    {
+      "id": 10,
+      "imagen": "img/gato5.jpeg",
+      "animal": "Gato",
+      "raza": "Norwegian Forest cat",
+      "nombre": "Laika",
+      "edad": "1 Año",
+      "propietario": "Sin Propietario"
+    },
+    {
+      "id": 10,
+      "imagen": "img/gato5.jpeg",
+      "animal": "gat",
+      "raza": "Norwegian Forest cat",
+      "nombre": "Alex",
+      "edad": "1 Año",
+      "propietario": "Sin Propietario"
+    }
+  ]
+}

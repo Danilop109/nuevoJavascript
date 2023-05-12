@@ -1,0 +1,20 @@
+[
+	{
+		"id_usuario": "2",
+		"imagen": "jose.jpg",
+		"cedula": "10292983939",
+		"nombre": "Alberto",
+        "programa": "TECNOLOGÍA EN OPERACIONES",
+		"sexo": "M",
+        "jornada": "NOCTURNA"
+	},
+	{
+		"id_usuario": "3",
+		"imagen": "juan.jpg",
+		"cedula": "1023099933",
+		"nombre": "Albe",
+        "programa": "TECNOLOGÍA EN DESARROLLO",
+		"sexo": "M",
+        "jornada": "DIURNA"
+	}
+]

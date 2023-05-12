@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.contenedor{
+    display: flex;
+    background-color: antiquewhite;
+    margin-top: 4%;
+    padding: 4%;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 60%;
+    height: 1200px;
+    
+}
+.contenido{
+    display: flex;
+    background-color: dimgrey;
+    padding: 7%;
+    border-radius: 20px;
+    width: 100%;
+}
+form{
+    display: grid;
+    gap: 3rem;
+    width: 100%;
+}
+label{
+    color: blanchedalmond;
+    font-size: 20px;
+    font-weight: 800;
+}
+input{
+    border-radius: 4px;
+    border: none;
+    height: 20px;
+    text-align: center;
+}
+.boton{
+    display:flex;
+    position: absolute;
+    margin-left: 30%;
+    width: 40px;
+    height: 40px;
+    flex-wrap: wrap;
+}
+button{
+    border: none;
+    background-color: silver;
+    border-radius: 20px;
+    padding: 29%;
+    box-shadow: 0px 1px 14px 3px #607D8B;
+    font-size: initial;
+}
+button:hover{
+    background-color: #607D8B;
+    color: aliceblue;
+}
+.card {
+background-color: rgb(245, 245, 248);
+color: rgb(0, 0, 0);
+margin: 3%;
+border-radius: 10px;
+padding: 2%;
+display: flex;
+gap: 1rem;
+flex-direction: column;
+box-shadow: 5px 4px 5px 2px rgb(225, 225, 235);
+border-style: double;
+border-color: rgb(0, 0, 0);
+width: 40%;
+}
+.card h3{
+color: #dd1717;
+display: flex;
+align-self: center;
+font-family: monospace;
+font-weight: 800;
+}
+.cardAlternativa {
+background-color: rgb(73, 71, 72);
+color: white;
+margin: 3%;
+padding: 2%;
+border-radius: 10px;
+display: flex;
+gap: 1rem;
+flex-direction: column;
+box-shadow: -2px -4px 14px 8px rgb(85, 85, 85);
+border-style: dashed;
+width: 40%;
+}
+.cardAlternativa h3{
+color: #09f7ff;
+display: flex;
+align-self: center;
+font-family: monospace;
+font-weight: 800;
+}
+.primero{
+display: none;
+}
+.segundo{
+display: flex;
+}

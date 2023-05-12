@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+    <style>
+        .container{
+            background-color: rgb(135, 155, 194);
+            padding: 30px;
+            border-radius: 20px;
+        }
+        #titulo{
+            color: black;
+            font-size: 60px;
+        }
+        .styleBlanco {
+            background-color: rgb(100, 148, 236);
+            padding: 2rem;
+            margin: 2rem;
+            border-radius: 10px;
+        }
+
+        .styleGris {
+            background-color: rgb(211, 91, 91);
+            padding: 2rem;
+            margin: 2rem;
+            border-radius: 10px;
+        }
+
+        .minimoEstilo{
+            background-color: rgb(50, 51, 133);
+            color: white;
+            padding: 2rem;
+            margin: 2rem;
+            border-radius: 10px;
+        }
+        label{
+            padding-top: 5px;
+            color: rgb(39, 38, 38);
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center" id="titulo">Productos</h1>
+            </div>
+        </div>
+        <div class="row">
+            <form action="" method="post" name="formulario">
+                <div class="col-12">
+                    <label for="">Codigo del producto: </label>
+                    <input type="text" name="" id="codigo" class="form-control" placeholder="Codigo">
+                </div>
+                <div class="col-12">
+                    <label for="">Tipo de prenda</label>
+                    <select class="form-select selector" aria-label="Default select example">
+                        <option selected>Elige que tipo de prenda</option>
+                        <option value="1">Prenda de vestir</option>
+                        <option value="2">Calzado</option>
+                      </select>
+                </div>
+                <div class="prenda" style="display: none;" id="prenda">
+                    <div>
+                    <label for="" class="form-label">Ingrese talla: </label>
+                    <input type="text"
+                      class="form-control" name="tallaPrenda"  aria-describedby="helpId" placeholder="Talla">
+                    </div>
+                    <label for="" class="form-label">Necesita Planchado </label>
+                    <input type="text"
+                      class="form-control" name="planchar"  aria-describedby="helpId" placeholder="">
+                    <label for="" class="form-label">Cantidad </label>
+                    <input type="text"
+                      class="form-control" name="cantidad"  aria-describedby="helpId" placeholder="Cantidad">
+                </div>
+                <div class="calzado" style="display: none;" id="calzado">
+                    <div>
+                    <label for="" class="form-label">Ingrese talla: </label>
+                        <input type="text"
+                          class="form-control" name="tallaCalzado"  aria-describedby="helpId" placeholder="Talla">
+                    </div>
+                    <label for="" class="form-label">Cantidad </label>
+                    <input type="text"
+                      class="form-control" name="cantidad"  aria-describedby="helpId" placeholder="Cantidad">
+                </div>
+                <div class="col-12">
+                    <label for="">Precio de la compra</label>
+                    <input type="text" name="" id="precioCompra" class="form-control" placeholder="precioCompra">
+                </div>
+                <div class="col-12">
+                    <label for="">Precio de la venta</label>
+                    <input type="text" name="" id="precioVenta" class="form-control" placeholder="precioVenta">
+                </div>
+                <div class="col-12">
+                    <label for="">Cantidad de producto en bodega: </label>
+                    <input type="text" name="" id="cantidadBodega" class="form-control" placeholder="cantidadBodega">
+                </div>
+                <div class="col-12">
+                    <label for="">Cantidad minima requerida: </label>
+                    <input type="text" name="" id="minima" class="form-control" placeholder="minima">
+                </div>
+                <div class="col-12">
+                    <label for="">Cantidad maxima requerida: </label>
+                    <input type="text" name="" id="maxima" class="form-control" placeholder="maxima">
+                </div>
+                <div class="col-12">
+                    <label for="">Descuento: </label>
+                    <input type="text" name="" id="descuento" class="form-control" placeholder="descuento">
+                </div>
+
+                <button type="button" class="btn btn-primary m-2" id="enviar">Enviar datos</button>
+
+            </form>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="cards">
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-danger m-2" id="minimo">Calcular minimo</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="cardMinimo">
+        
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="producto.js"></script>
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

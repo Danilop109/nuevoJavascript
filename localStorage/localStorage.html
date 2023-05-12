@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        Ejemplo LocalStorage
+    </h1>
+
+    <script>
+        localStorage.setItem("Nombre", "Santiago");
+        localStorage.Apellido = "Hernandez";
+
+
+        let nombre = localStorage.Nombre;
+        let apellido = localStorage.getItem("Apellido")
+
+        alert(nombre + " " + apellido)
+
+        // localStorage.removeItem("Nombre");
+
+
+        // for(let i=0; i<localStorage.length; i++){
+        //     let k=localStorage.key(i);
+        //     console.log(`Llave: ${k} => Valor ${localStorage.getItem(k)}`)
+        // }
+
+        // for(let k in localStorage){
+        //     if(!localStorage.hasOwnProperty(k))
+        //     continue 
+        //     console.log(`Llave: ${k} => Valor ${localStorage.getItem(k)}`)
+        // }
+
+        let keys= Object.keys(localStorage);
+        for(let key of keys){
+            alert(`Llave: ${key} => Valor ${localStorage.getItem(key)}`)
+        }
+
+
+        // const Person ={
+        //     name: "Jhon Doe",
+        //     age: 32,
+        //     gender:"male",
+        //     profession: "optician",
+        // };
+        // let vPerson= [Person,Person,Person];
+        // localStorage.setItem("myObject", JSON.stringify(vPerson));
+        // alert(localStorage.getItem("myObject"));
+
+        // let newObject=localStorage.getItem("myObject");
+        // console.log(JSON.parse(newObject));
+    </script>
+</body>
+
+</html>

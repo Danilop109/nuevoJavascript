@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+header{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, red, yellow, green, cyan, blue, violet);
+    color: rgb(71, 71, 71);
+    margin-bottom: 4rem;
+}
+.peticiones{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.peticiones input{
+    border: none;
+    background-color: yellowgreen;
+    padding: 2%;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+}
+.peticiones input:hover{
+    background-color: rgb(3, 63, 6);
+}
+.boton{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.boton button{
+    border: none;
+    border-radius: 40px;
+    padding: 10px;
+    background: linear-gradient(to right, #ff7f50, #ffcc33, #00bfff, #9400d3);
+    color: rgb(39, 31, 31);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    background-size: 300% 100%;
+   
+}
+button:hover {
+    transition:background-position 5s;
+    background-position: 100% 0;
+}
+.cont{
+    margin-left: 3%;
+    font-size: 20px;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Ejemplo sessionStorage</h1>
+    </header>
+    <main>
+      <div class="peticiones">
+      <input type="text" placeholder="nombre" id="nombre" />
+      <input type="text" placeholder="apellido" id="apellido" />
+      </div>
+      <div class="boton">
+      <button id="guardar">guardar</button>
+      </div>
+      <div class="cont" id="nYa"></div>
+      <div class="boton">
+      <button id="cargar">cargar elementos</button>
+      </div>
+      <div class="cont" id="yaCargados"></div>
+
+      <!-- <script>
+        fetch('/utilidades/nav.html')
+        .then(response => response.text())
+        .then(data => {
+          const header = document.querySelector('#header');
+          header.innerHTML = data;
+    });
+      </script> -->
+    </main>
+
+    <script>
+      let ingresos = [];
+      let guardar = document.getElementById("guardar");
+      let cargar = document.getElementById("cargar");
+
+      function datos(nombre,apellido){
+        let nomYape = "el nombre es: "+nombre+" y el apellidpo es: "+apellido;
+        return nomYape
+      }
+     
+      function guardarIngreso(nombre, apellido) {
+        let ingreso = { nombre: nombre, apellido: apellido };
+        ingresos.push(ingreso);
+      }
+     
+      guardar.addEventListener("click", () => {
+        let nombre = document.getElementById("nombre").value;
+        let apellido = document.getElementById("apellido").value;
+
+        const nomYapeAgregando = datos(nombre,apellido)
+        guardarIngreso(nombre, apellido);
+
+        sessionStorage.setItem("ingresos", JSON.stringify(ingresos));
+
+        let local = document.createElement("p");
+        local.innerHTML = "---> datos almacenados : " + nomYapeAgregando;
+        let almacenamiento = document.getElementById("nYa");
+        almacenamiento.appendChild(local);
+
+        document.getElementById("nombre").value=""
+        document.getElementById("apellido").value=""
+
+      });
+
+     
+
+      cargar.addEventListener('click', () => {
+        const yaCargados = document.getElementById("yaCargados");
+        const ingresosGuardados = JSON.parse(sessionStorage.getItem("ingresos"));
+
+        if (ingresosGuardados) {
+            ingresos = ingresosGuardados;
+            // ingreso = ingresos.at(-1);
+            ingresos.forEach((ingreso) => {
+            let local = document.createElement("p");
+            local.innerHTML = ` 👿 nombre: ${ingreso.nombre} | apellido: ${ingreso.apellido}`;
+            yaCargados.appendChild(local);
+    });
+  }
+});
+window.addEventListener('load', () => {
+        const almacenamiento = document.getElementById("yaCargados");
+        const ingresosGuardados = JSON.parse(sessionStorage.getItem("ingresos"));
+
+        if (ingresosGuardados) {
+            ingresos = ingresosGuardados;
+            ingresos.forEach((ingreso) => {
+            let local = document.createElement("p");
+            local.innerHTML = `🫸 nombre: ${ingreso.nombre} | apellido: ${ingreso.apellido}`;
+            almacenamiento.appendChild(local);
+    });
+  }
+});
+// sessionStorage.clear()
+
+    </script>
+  </body>
+</html>

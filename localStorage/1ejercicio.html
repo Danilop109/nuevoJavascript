@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Ejemplo-localStorage</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form action="" name="formulario" class="formulario">
+                    <input type="text" name="" id="nombre" class="form-control" placeholder="Nombre">
+                    <input type="text" name="" id="apellido" class="form-control" placeholder="Apellido">
+                    <br>
+                    <button id="guardar">Guardar</button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <h2 id="nombreAlmacenado">
+
+        </h2>
+        <h2 id="apellidoAlmacenado">
+
+        </h2>
+        <button id="cargar">Cargar elementos</button>
+        <hr>
+    </div>
+
+
+    <script>
+        //  let guardar = document.getElementById("guardar");
+        //  guardar.addEventListener("click", (el) => {
+        //      let nombre = document.getElementById("nombre").value;
+        //      let apellido = document.getElementById("apellido").value;
+        //      localStorage.Nombre = nombre;
+        //      localStorage.Apellido = apellido;
+
+        //  })
+
+        //  let cargar = document.getElementById("cargar");
+        //  cargar.addEventListener("click", (el)=>{
+
+        //      document.getElementById("nombreAlmacenado").innerHTML = `EL nombre es ${localStorage.Nombre}`;
+        //      document.getElementById("apellidoAlmacenado").innerHTML = `El apellido es ${localStorage.Apellido}`;
+
+
+        //  })
+
+
+        /*     let guardar = document.getElementById("guardar");
+             guardar.addEventListener("click", (el)=>{
+                 let nombre= document.getElementById("nombre").value;
+                 let apellido= document.getElementById("apellido").value;
+                 sessionStorage.Nombre
+             })*/
+
+
+        let array = [];
+        let guardar = document.getElementById("guardar");
+        guardar.addEventListener("click", (el) => {
+        el.preventDefault()
+            let nombre = document.getElementById("nombre").value;
+            let apellido = document.getElementById("apellido").value;
+          
+            let ingreso = { Nombre: nombre, Apellido: apellido };
+            array.push(ingreso);
+
+            sessionStorage.setItem("ingresos", JSON.stringify(array));
+
+            // document.getElementById("nombre").value = ""
+            // document.getElementById("apellido").value = ""
+        })
+
+        let cargar = document.getElementById("cargar");
+        cargar.addEventListener("click", (el) => {
+            el.preventDefault()
+
+            const ingresosGuardados = JSON.parse(sessionStorage.getItem("ingresos"));
+
+            if (ingresosGuardados) {
+                ingresos = ingresosGuardados;
+                // ingreso = ingresos.at(-1);
+                ingresos.forEach((ing) => {
+                    document.getElementById("nombreAlmacenado").innerHTML = `EL nombre es ${localStorage.getItem("Nombre")}`;
+                    document.getElementById("apellidoAlmacenado").innerHTML = `El apellido es ${localStorage.getItem("Apellido")}`;
+                });
+            }
+        })
+
+    </script>
+</body>
+
+</html>
